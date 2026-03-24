@@ -8,10 +8,10 @@ X = data["Experience_Years"].values
 y = data["Salary_INR"].values
 
 X_mean = X.mean()
-X_std = X.std()
-X_scaled = (X - X_mean) / X_std
+X_std = X.std()       # Or we can use StandardScalar... remember only transform ur x_test not fit transoform itt...
+X_scaled = (X - X_mean) / X_std 
 
-
+# Using gradient decent
 def hypothesis(thetha0, thetha1, X):
     return thetha0 + thetha1 * X
 
